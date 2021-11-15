@@ -1,0 +1,35 @@
+.filterDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.paginatorDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+mat-form-field {
+    margin: 10px 0 10px 0;
+}
+
+.filterDiv * {
+    padding: 0 10px 0 10px !important;
+    margin: 0 10px 0 10px !important;
+}
+
+.mat-row:hover {
+    background-color: #E8EAF6;
+    cursor: pointer;
+  }
+
+.spinnerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

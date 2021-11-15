@@ -1,0 +1,16 @@
+section {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-card {
+    max-width: 500px;
+}
+
+
+mat-card-content {
+    display: flex;
+    flex-direction: column;
+}

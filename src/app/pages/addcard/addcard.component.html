@@ -1,0 +1,73 @@
+<section>
+  
+    <mat-card class="mat-elevation-z8 border-radius">
+      <form #f="ngForm" (ngSubmit)="addCard(f)">
+      <mat-card-title>Add Card</mat-card-title>
+      <mat-card-subtitle>Enter Details Below</mat-card-subtitle>
+      
+      <mat-card-content>
+          <div class="card-row row1">
+            <mat-form-field>
+                <input type="text" matInput placeholder="Year" ngModel name="year" required #yearInput="ngModel">
+                <mat-error *ngIf="yearInput.hasError('required')">Field must not be empty.</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+              <input  type="text" matInput placeholder="Brand" ngModel name="brand" required #brandInput="ngModel">
+              <mat-error *ngIf="brandInput.hasError('required')">Field must not be empty.</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+              <input  type="text" matInput placeholder="Card #" ngModel name="cardNumber" required #cardNumberInput="ngModel">
+              <mat-error *ngIf="cardNumberInput.hasError('required')">Field must not be empty.</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input  type="text" matInput placeholder="Grade" ngModel name="grade" required #gradeInput="ngModel">
+            <mat-error *ngIf="gradeInput.hasError('required')">Field must not be empty.</mat-error>
+        </mat-form-field>
+          </div>
+          <div class="card-row row2">
+            <mat-form-field>
+                <input  type="text" matInput placeholder="First" ngModel name="firstName" required #firstNameInput="ngModel">
+                <mat-error *ngIf="firstNameInput.hasError('required')">Field must not be empty.</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input  type="text" matInput placeholder="Last" ngModel name="lastName" required #lastNameInput="ngModel">
+                <mat-error *ngIf="lastNameInput.hasError('required')">Field must not be empty.</mat-error>
+            </mat-form-field>
+          </div>
+              
+          <div class="card-row row3">
+            <mat-form-field>
+                <input  type="text" matInput placeholder="Buy Price" ngModel name="buyPrice" required #buyPriceInput="ngModel">
+                <mat-error *ngIf="buyPriceInput.hasError('required')">Field must not be empty.</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input  type="text" matInput placeholder="Buy Date" ngModel name="buyDate" required #buyDateInput="ngModel">
+                <mat-error *ngIf="buyDateInput.hasError('required')">Field must not be empty.</mat-error>
+            </mat-form-field>
+          </div>
+            <div class="card-row row4">
+                <mat-form-field>
+                    <input  type="text" matInput placeholder="Selling Price" ngModel name="sellingPrice" required #sellingPriceInput="ngModel">
+                    <mat-error *ngIf="sellingPriceInput.hasError('required')">Field must not be empty.</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input  type="text" matInput placeholder="Sold Price" ngModel name="soldPrice" required #soldPriceInput="ngModel">
+                    <mat-error *ngIf="soldPriceInput.hasError('required')">Field must not be empty.</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input  type="text" matInput placeholder="Sold date" ngModel name="soldDate" required #soldDateInput="ngModel">
+                    <mat-error *ngIf="soldDateInput.hasError('required')">Field must not be empty.</mat-error>
+                </mat-form-field>
+            </div>
+            
+            
+          
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary">Save</button>
+        <button mat-raised-button color="primary" routerLink="/cards">Cancel</button>
+      </mat-card-actions>
+  </form>
+    </mat-card>
+  
+  </section>

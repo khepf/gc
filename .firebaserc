@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "gemini-collectibles": {
+      "hosting": {
+        "angular-card-inventory": [
+          "gemini-collectibles"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "gemini-collectibles"
+  }
+}
