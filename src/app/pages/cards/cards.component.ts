@@ -1,6 +1,6 @@
-import { AfterViewInit, Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
+import { AfterViewInit, AfterContentChecked, DoCheck, Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
+import { MatSort, MatSortable } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { BaseballCard } from 'src/app/models/baseball-card.model';
 import { BaseballCardService } from 'src/app/services/baseball-card.service';
@@ -43,9 +43,13 @@ export class CardsComponent implements OnInit, AfterViewInit, OnDestroy {
       this.baseballCards.data = cards;
     })
     this.fetchCards();
+    
+    
   }
 
+
   ngAfterViewInit() {
+   
     this.baseballCards.sort = this.sort;
     this.baseballCards.paginator = this.paginator;
   }

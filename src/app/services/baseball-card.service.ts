@@ -22,7 +22,7 @@ export class BaseballCardService {
    
    fetchBaseballCards() {
       this.uiService.loadingStateChanged.next(true);
-      this.fbSubs.push(this.db.collection('baseballCards')
+      this.fbSubs.push(this.db.collection('baseballCards', ref => ref.orderBy('year'))
       .snapshotChanges()
       .pipe(map(docArray => {
          return docArray.map((doc: any) => {
