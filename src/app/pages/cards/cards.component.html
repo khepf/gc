@@ -3,6 +3,7 @@
         <mat-form-field class="mat-elevation-z8 border-radius">
             <input #cardFilter matInput type="text" (keyup)="doFilter(cardFilter.value)" placeholder="Filter">
         </mat-form-field>
+        <button mat-raised-button color="primary" (click)="clearFilterInput()">Clear</button>
         <button mat-raised-button color="primary" routerLink="/addcard">Add Card</button>
         
     </div>

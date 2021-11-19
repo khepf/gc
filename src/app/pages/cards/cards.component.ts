@@ -30,6 +30,7 @@ export class CardsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild('cardFilter') inputName: any;
 
   constructor(private baseballCardService: BaseballCardService, private router: Router, private uiService: UIService) { }
 
@@ -57,6 +58,12 @@ export class CardsComponent implements OnInit, AfterViewInit, OnDestroy {
   doFilter(filterValue: string) {
     this.baseballCards.filter = filterValue.trim().toLowerCase();
   }
+
+  clearFilterInput(){
+    // clearing the value
+  this.inputName.nativeElement.value = ' ';
+  this.baseballCards.filter = '';
+}
 
   goToEditCardPage(card: BaseballCard) {
     this.baseballCardService.dataRow = card;

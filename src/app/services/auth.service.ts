@@ -30,7 +30,7 @@ export class AuthService {
             } else {
                 this.baseballCardService.cancelSubscriptions();
                 this.authChange.next(false);
-                this.router.navigate(['/login']);
+                this.router.navigate(['/']);
                 this.isAuthenticated = false;
             }
         });
@@ -65,8 +65,8 @@ export class AuthService {
     }
 
     logout() {
+        console.log('hi');
         this.afAuth.signOut();
-       
     }
 
     isAuth() {

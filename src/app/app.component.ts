@@ -1,8 +1,6 @@
-import { Component, OnDestroy, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AuthService } from './services/auth.service';
 import { Subscription } from 'rxjs';
-import { ViewChild } from '@angular/core';
-import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-root',
@@ -14,8 +12,9 @@ export class AppComponent implements OnInit, OnDestroy {
   isAuth = false;
   authSubscription!: Subscription;
 
-  @ViewChild('snav', { static: false }) sideMenu!: MatSidenav;
- 
+
+
+
 
   constructor(private authService: AuthService) {
 
@@ -29,11 +28,12 @@ export class AppComponent implements OnInit, OnDestroy {
     
   }
 
-
-
   onLogout() {
+    
     this.authService.logout();
-this.sideMenu.close();
+    
+    
+    
   }
 
   ngOnDestroy() {

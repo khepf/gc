@@ -11,7 +11,7 @@ import { LandingComponent } from './pages/landing/landing.component';
 import { AboutComponent } from './pages/about/about.component';
 import { CardsComponent } from './pages/cards/cards.component';
 import { AddCardComponent } from './pages/addcard/addcard.component';
-import { EditCardComponent } from './pages/editcard/editcard.component';
+import { DeleteModalComponent, EditCardComponent } from './pages/editcard/editcard.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -28,6 +28,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AuthService } from './services/auth.service';
 import { BaseballCardService } from './services/baseball-card.service';
@@ -48,7 +49,8 @@ import { UIService } from './services/ui.service';
     CardsComponent,
     ContactComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    DeleteModalComponent
   ],
   imports: [
     BrowserModule,
@@ -58,6 +60,7 @@ import { UIService } from './services/ui.service';
     ReactiveFormsModule,
     
     MatFormFieldModule,
+    MatDialogModule,
     MatInputModule,
     MatCardModule,
     MatButtonModule,

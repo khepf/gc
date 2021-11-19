@@ -7,7 +7,7 @@
   <a mat-list-item routerLink="/contact"><mat-icon>contact_support</mat-icon><span class="sidenav-span" (click)="sidenav.close()">Contact</span></a>
   <!-- <a *ngIf="!isAuth" mat-list-item routerLink="/register"><mat-icon>how_to_reg</mat-icon><span class="sidenav-span" (click)="sidenav.close()">Register</span></a> -->
   <a *ngIf="!isAuth" mat-list-item routerLink="/login"><mat-icon>login</mat-icon><span class="sidenav-span" (click)="sidenav.close()">Login</span></a>
-  <mat-list-item *ngIf="isAuth" routerLink="/login"><button mat-icon-button><mat-icon>logout</mat-icon><span class="sidenav-span" (click)="onLogout()">Logout</span></button></mat-list-item>
+  <mat-list-item *ngIf="isAuth"><button mat-icon-button><mat-icon>logout</mat-icon><span class="sidenav-span" (click)="onLogout(); sidenav.close()">Logout</span></button></mat-list-item>
 </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

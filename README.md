@@ -37,9 +37,8 @@ Angularfire Official Docs: https://github.com/angular/angularfire2/blob/master/d
 Firebase Docs: https://firebase.google.com/docs/web/setup
 More on RxJS Observables: https://academind.com/learn/javascript/understanding-rxjs/
 
-spinner to login issue
-snackbars for all confirmations
-modal for delete "are you sure?"
+
+clear filter button
 
 // WISH
 ebay api
