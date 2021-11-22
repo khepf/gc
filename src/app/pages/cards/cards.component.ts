@@ -11,6 +11,7 @@ import { UIService } from 'src/app/services/ui.service';
 
 
 
+
 @Component({
   selector: 'app-cards',
   templateUrl: './cards.component.html',
@@ -44,8 +45,6 @@ export class CardsComponent implements OnInit, AfterViewInit, OnDestroy {
       this.baseballCards.data = cards;
     })
     this.fetchCards();
-    
-    
   }
 
 

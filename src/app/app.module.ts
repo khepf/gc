@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -29,6 +28,8 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { AuthService } from './services/auth.service';
 import { BaseballCardService } from './services/baseball-card.service';
@@ -37,6 +38,7 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { UIService } from './services/ui.service';
 
 @NgModule({
@@ -50,7 +52,7 @@ import { UIService } from './services/ui.service';
     ContactComponent,
     RegisterComponent,
     LoginComponent,
-    DeleteModalComponent
+    DeleteModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,13 +60,14 @@ import { UIService } from './services/ui.service';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    
     MatFormFieldModule,
+    MatMenuModule,
     MatDialogModule,
     MatInputModule,
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,
+    MatTooltipModule,
     MatSidenavModule,
     MatIconModule,
     MatListModule,
@@ -75,9 +78,10 @@ import { UIService } from './services/ui.service';
     MatProgressSpinnerModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFireStorageModule,
   ],
   providers: [AuthService, BaseballCardService, UIService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -13,7 +13,7 @@ export const environment = {
     authDomain: 'gemini-collectibles.firebaseapp.com',
     messagingSenderId: '792024159022',
     measurementId: 'G-BX13Y92HY6',
-  }
+  },
 };
 
 /*

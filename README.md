@@ -37,10 +37,29 @@ Angularfire Official Docs: https://github.com/angular/angularfire2/blob/master/d
 Firebase Docs: https://firebase.google.com/docs/web/setup
 More on RxJS Observables: https://academind.com/learn/javascript/understanding-rxjs/
 
-
-clear filter button
+- attach gemini-collectibles to netlify
+- angular ecommerce for landing page https://www.smashingmagazine.com/2021/07/ecommerce-angular11-headless-paypal/
+- google adsense https://yaroslav-solonnikov.medium.com/
 
 // WISH
-ebay api
-barcode scanner (from phone camera)
 
+- ebay api - registered, check back in a day
+- image upload - reddit post
+- table reformat
+- barcode scanner (from phone camera)
+
+- sort by year, then brand, then card number
+
+// BLOCKED
+
+- create-reusable-ads-banners-with-angular-and-google-adsense - not enough site views, too new of a site
+
+Added:
+1933 Goudey
+1939 Play Ball
+1941 Play Ball
+1949 Bowman
+1950 Bowman
+1951 Topps
+1951 Bowman
+PSA Graded Cards

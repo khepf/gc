@@ -21,11 +21,7 @@
     "@angular/platform-browser": "~12.1.0",
     "@angular/platform-browser-dynamic": "~12.1.0",
     "@angular/router": "~12.1.0",
-    "@cloudinary/angular-5.x": "^1.5.0",
-    "cloudinary-core": "^2.12.0",
-    "core-js": "^3.19.1",
     "firebase": "^9.1.0",
-    "ng2-file-upload": "^1.4.0",
     "rxfire": "^6.0.0",
     "rxjs": "~6.6.0",
     "rxjs-compat": "^6.6.7",
@@ -46,6 +42,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "prettier": "^2.4.1",
     "typescript": "~4.3.2"
   }
 }
