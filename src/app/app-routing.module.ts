@@ -12,18 +12,19 @@ import { AddCardComponent } from './pages/addcard/addcard.component';
 import { EditCardComponent } from './pages/editcard/editcard.component';
 
 const routes: Routes = [
-{path: '', component: LandingComponent},
-{path: 'about', component: AboutComponent},
-{path: 'cards', component: CardsComponent, canActivate: [AuthGuard]},
-{path: 'addcard', component: AddCardComponent, canActivate: [AuthGuard]},
-{path: 'editcard/:id', component: EditCardComponent, canActivate: [AuthGuard] },
-{path: 'contact', component: ContactComponent},
-{path: 'register', component: RegisterComponent},
-{path: 'login', component: LoginComponent},];
+  { path: '', component: LandingComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'cards', component: CardsComponent, canActivate: [AuthGuard] },
+  { path: 'addcard', component: AddCardComponent, canActivate: [AuthGuard] },
+  { path: 'editcard/:id', component: EditCardComponent, canActivate: [AuthGuard] },
+  { path: 'contact', component: ContactComponent },
+  // {path: 'register', component: RegisterComponent},
+  { path: 'login', component: LoginComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  providers: [AuthGuard]
+  providers: [AuthGuard],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
