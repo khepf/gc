@@ -13,17 +13,17 @@ Angularfire Official Docs: https://github.com/angular/angularfire2/blob/master/d
 Firebase Docs: https://firebase.google.com/docs/web/setup
 More on RxJS Observables: https://academind.com/learn/javascript/understanding-rxjs/
 
-- attach gemini-collectibles to netlify
 - angular ecommerce for landing page https://www.smashingmagazine.com/2021/07/ecommerce-angular11-headless-paypal/
 - google adsense https://yaroslav-solonnikov.medium.com/
+
+firefoo for all imports/exports/backups
+contact form - emailjs.com
 
 // WISH
 
 - ebay api - registered, check back in a day
 - image upload - reddit post
 - table reformat
-- barcode scanner (from phone camera)
-
 - sort by year, then brand, then card number
 
 // BLOCKED
@@ -38,4 +38,10 @@ Added:
 1950 Bowman
 1951 Topps
 1951 Bowman
+1952 Topps
+1952 Bowman
+1953 Topps
+1953 Bowman B/W
+1953 Bowman Color
+1954 Topps
 PSA Graded Cards

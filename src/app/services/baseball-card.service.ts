@@ -18,12 +18,7 @@ export class BaseballCardService {
   dataRow: any;
   private fbSubs: Subscription[] = [];
 
-  constructor(
-    private db: AngularFirestore,
-    private router: Router,
-    private uiService: UIService,
-    private afAuth: AngularFireAuth
-  ) {}
+  constructor(private db: AngularFirestore, private router: Router, private uiService: UIService) {}
 
   fetchBaseballCards(uid: any) {
     this.uiService.loadingStateChanged.next(true);

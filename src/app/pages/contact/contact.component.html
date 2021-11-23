@@ -1,1 +1,33 @@
-<p>contact works!</p>
+<section>
+  <mat-card class="mat-elevation-z8 border-radius">
+    <form [formGroup]="FormData" (ngSubmit)="sendEmail($event)">
+      <mat-card-title>Contact Us</mat-card-title>
+      <mat-card-subtitle><i>"Send Me a Postcard, Drop Me a Line"</i></mat-card-subtitle>
+      <mat-card-content>
+        <mat-form-field>
+          <input
+            matInput
+            type="email"
+            class="form-control"
+            name="Email"
+            aria-describedby="emailHelp"
+            placeholder="Email"
+            formControlName="Email"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="text" class="form-control" name="Name" placeholder="Your Name" formControlName="Name" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>How Can We Help You?</mat-label>
+          <textarea matInput class="form-control" formControlName="Comment" name="Comment"> </textarea>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" type="submit" class="btn btn-primary" [disabled]="!FormData.valid">
+          Submit
+        </button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</section>

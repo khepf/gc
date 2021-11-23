@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -40,6 +41,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { UIService } from './services/ui.service';
+import { ContactService } from './services/contact.service';
 
 @NgModule({
   declarations: [
@@ -60,6 +62,7 @@ import { UIService } from './services/ui.service';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     MatFormFieldModule,
     MatMenuModule,
     MatDialogModule,
@@ -81,7 +84,7 @@ import { UIService } from './services/ui.service';
     AngularFireAuthModule,
     AngularFireStorageModule,
   ],
-  providers: [AuthService, BaseballCardService, UIService],
+  providers: [AuthService, BaseballCardService, UIService, ContactService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

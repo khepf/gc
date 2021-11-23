@@ -1,0 +1,28 @@
+section {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../../assets/banner.jpg');
+}
+
+mat-card {
+  max-width: 500px;
+}
+
+mat-card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-card-actions,
+mat-card-title,
+mat-card-subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-card-title {
+  margin-bottom: 15px;
+}
