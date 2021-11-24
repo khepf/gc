@@ -17,70 +17,76 @@
     <!-- Year Column -->
     <ng-container matColumnDef="year">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Year </mat-header-cell>
-      <mat-cell *matCellDef="let baseballcard"> {{ baseballcard.year }} </mat-cell>
+      <mat-cell *matCellDef="let baseballcard" data-label="Year:"> {{ baseballcard.year }}</mat-cell>
     </ng-container>
 
     <!-- Brand Column -->
     <ng-container matColumnDef="brand">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Brand </mat-header-cell>
-      <mat-cell *matCellDef="let baseballcard"> {{ baseballcard.brand }} </mat-cell>
+      <mat-cell *matCellDef="let baseballcard" data-label="Brand:"> {{ baseballcard.brand }} </mat-cell>
     </ng-container>
 
     <!-- Card Number Column -->
     <ng-container matColumnDef="cardNumber">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Card # </mat-header-cell>
-      <mat-cell *matCellDef="let baseballcard"> {{ baseballcard.cardNumber }} </mat-cell>
+      <mat-cell *matCellDef="let baseballcard" data-label="Card #:"> {{ baseballcard.cardNumber }} </mat-cell>
     </ng-container>
 
     <!-- Grade Column -->
     <ng-container matColumnDef="grade">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Grade </mat-header-cell>
-      <mat-cell *matCellDef="let baseballcard"> {{ baseballcard.grade }} </mat-cell>
+      <mat-cell *matCellDef="let baseballcard" data-label="Grade:"> {{ baseballcard.grade }} </mat-cell>
     </ng-container>
 
     <!-- First Name Column -->
     <ng-container matColumnDef="firstName">
       <mat-header-cell *matHeaderCellDef mat-sort-header> First </mat-header-cell>
-      <mat-cell *matCellDef="let baseballcard"> {{ baseballcard.firstName }} </mat-cell>
+      <mat-cell *matCellDef="let baseballcard" data-label="First:"> {{ baseballcard.firstName }} </mat-cell>
     </ng-container>
 
     <!-- Last Name Column -->
     <ng-container matColumnDef="lastName">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Last </mat-header-cell>
-      <mat-cell *matCellDef="let baseballcard"> {{ baseballcard.lastName }} </mat-cell>
+      <mat-cell *matCellDef="let baseballcard" data-label="Last:"> {{ baseballcard.lastName }} </mat-cell>
     </ng-container>
 
     <!-- Buy Price Column -->
     <ng-container matColumnDef="buyPrice">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Buy Price </mat-header-cell>
-      <mat-cell *matCellDef="let baseballcard"> {{ baseballcard.buyPrice | currency }} </mat-cell>
+      <mat-cell *matCellDef="let baseballcard" data-label="Buy Price:">
+        {{ baseballcard.buyPrice | currency }}
+      </mat-cell>
     </ng-container>
 
     <!-- Buy Date Column -->
     <ng-container matColumnDef="buyDate">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Buy Date </mat-header-cell>
-      <mat-cell *matCellDef="let baseballcard"> {{ baseballcard.buyDate | date }} </mat-cell>
+      <mat-cell *matCellDef="let baseballcard" data-label="Buy Date:"> {{ baseballcard.buyDate | date }} </mat-cell>
     </ng-container>
 
     <!-- Selling Price Column -->
     <ng-container matColumnDef="sellingPrice">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Selling Price </mat-header-cell>
-      <mat-cell *matCellDef="let baseballcard"> {{ baseballcard.sellingPrice | currency }} </mat-cell>
+      <mat-cell *matCellDef="let baseballcard" data-label="Selling Price:">
+        {{ baseballcard.sellingPrice | currency }}
+      </mat-cell>
     </ng-container>
 
     <!-- Sold Price Column -->
     <ng-container matColumnDef="soldPrice">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Sold Price </mat-header-cell>
-      <mat-cell *matCellDef="let baseballcard"> {{ baseballcard.soldPrice | currency }} </mat-cell>
+      <mat-cell *matCellDef="let baseballcard" data-label="Sold Price:">
+        {{ baseballcard.soldPrice | currency }}
+      </mat-cell>
     </ng-container>
 
     <!-- Sold Date Column -->
     <ng-container matColumnDef="soldDate">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Sold Date </mat-header-cell>
-      <mat-cell *matCellDef="let baseballcard"> {{ baseballcard.soldDate | date }} </mat-cell>
+      <mat-cell *matCellDef="let baseballcard" data-label="Sold Date:"> {{ baseballcard.soldDate | date }} </mat-cell>
     </ng-container>
 
-    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns" (click)="goToEditCardPage(row)"></mat-row>
   </mat-table>
   <div class="paginatorDiv">

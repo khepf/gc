@@ -43,6 +43,7 @@ export class BaseballCardService {
                 soldDate: doc.payload.doc.data().soldDate,
                 soldPrice: doc.payload.doc.data().soldPrice,
                 year: doc.payload.doc.data().year,
+                notes: doc.payload.doc.data().notes,
               };
             });
           })

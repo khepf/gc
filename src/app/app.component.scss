@@ -1,49 +1,56 @@
-mat-sidenav-container, mat-sidenav-content, mat-sidenav {
-    height: 100%;
+mat-sidenav-container,
+mat-sidenav-content,
+mat-sidenav {
+  height: 100%;
 }
 
 mat-sidenav {
-  width: 250px;  
+  width: 250px;
 }
 
 a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
-a:hover, a:active {
-   color: lightgray;
+a:hover,
+a:active {
+  color: lightgray;
 }
 
 .nav-items-container {
-    display: none;
+  display: none;
 }
 
 .sidenav-span {
-    display: inline-block;
-    padding-left: 6px;
+  display: inline-block;
+  padding-left: 6px;
 }
 
+.yt-button-div {
+  margin-top: 10px;
+  margin-left: 10px;
+  flex-grow: 10;
 
+  a {
+    float: right;
+  }
+}
 
 @media only screen and (min-width: 700px) {
-    .hamburger-div {
-        display: none;
-    }
+  .hamburger-div {
+    display: none;
+  }
 
-    .nav-items-container {
+  .nav-items-container {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-}
+  }
 
-.nav-items {
+  .nav-items {
     display: flex;
     list-style: none;
     gap: 10px;
+  }
 }
-
-
-}
-
-

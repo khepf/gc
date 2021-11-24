@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { ContactService } from 'src/app/services/contact.service';
 import { init } from 'emailjs-com';
 init('user_sxKP6NpexcCxnJmKZAZYy');
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
@@ -14,7 +13,7 @@ import { UIService } from 'src/app/services/ui.service';
 export class ContactComponent implements OnInit {
   FormData!: FormGroup;
 
-  constructor(private builder: FormBuilder, private contact: ContactService, private uiService: UIService) {}
+  constructor(private builder: FormBuilder, private uiService: UIService) {}
 
   ngOnInit(): void {
     this.FormData = this.builder.group({

@@ -1,35 +1,92 @@
 .filterDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .paginatorDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
 
 mat-form-field {
-    margin: 10px 0 10px 0;
+  margin: 10px 0 10px 0;
 }
 
 .filterDiv * {
-    padding: 0 10px 0 10px !important;
-    margin: 0 10px 0 10px !important;
+  padding: 0 10px 0 10px !important;
+  margin: 0 10px 0 10px !important;
 }
 
 .mat-row:hover {
-    background-color: #E8EAF6;
-    cursor: pointer;
-  }
-
-.spinnerDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #e8eaf6;
+  cursor: pointer;
 }
 
+.spinnerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 760px) {
+  .mat-table {
+    border: 0;
+    vertical-align: middle;
+  }
+
+  .mat-table caption {
+    font-size: 1em;
+  }
+
+  .mat-table .mat-row {
+    border: 5px solid #ddd;
+    border-radius: 4px;
+    display: block;
+  }
+  /*
+    .mat-table .mat-row:nth-child(even) {background: #CCC}
+    .mat-table .mat-row:nth-child(odd) {background: #FFF}
+    */
+  .mat-table .mat-cell {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 4%;
+    min-height: 5px !important;
+    padding-left: 4%;
+  }
+  .mat-table .mat-cell:before {
+    /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+    content: attr(data-label);
+    float: left;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 0.85em;
+    // margin-top: 0 !important;
+    // margin-bottom: 0 !important;
+  }
+  .mat-table .mat-cell:last-child {
+    border-bottom: 0;
+  }
+  .mat-table .mat-cell:first-child {
+    margin-top: 4%;
+
+    padding-left: 4% !important;
+  }
+}
+
+@media screen and (max-width: 495px) {
+  .mat-header-row {
+    display: none;
+  }
+}

@@ -21,6 +21,7 @@ contact form - emailjs.com
 
 // WISH
 
+- need roles with test users capped at 50 entries
 - ebay api - registered, check back in a day
 - image upload - reddit post
 - table reformat
@@ -44,4 +45,6 @@ Added:
 1953 Bowman B/W
 1953 Bowman Color
 1954 Topps
+1954 Bowman
+1955 Topps
 PSA Graded Cards

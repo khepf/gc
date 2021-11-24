@@ -40,6 +40,7 @@ export class AddCardComponent implements OnInit {
       sellingPrice: form.value.sellingPrice,
       soldPrice: form.value.soldPrice,
       soldDate: form.value.soldDate,
+      notes: form.value.notes,
     });
   }
 
