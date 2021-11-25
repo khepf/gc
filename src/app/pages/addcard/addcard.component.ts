@@ -42,6 +42,7 @@ export class AddCardComponent implements OnInit {
       soldDate: form.value.soldDate,
       notes: form.value.notes,
     });
+    form.resetForm();
   }
 
   ngOnDestroy() {

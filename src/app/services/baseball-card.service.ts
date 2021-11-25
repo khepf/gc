@@ -21,6 +21,7 @@ export class BaseballCardService {
   constructor(private db: AngularFirestore, private router: Router, private uiService: UIService) {}
 
   fetchBaseballCards(uid: any) {
+    console.log('fetching cards');
     this.uiService.loadingStateChanged.next(true);
     this.fbSubs.push(
       this.db
@@ -74,9 +75,9 @@ export class BaseballCardService {
       .then((res) => {
         this.uiService.showSnackbar('Baseball Card added successfully', undefined, 3000);
       })
-      .then((res) => {
-        this.router.navigate(['/cards']);
-      })
+      // .then((res) => {
+      //   this.router.navigate(['/cards']);
+      // })
       .catch((err) => {
         console.log(err);
         this.uiService.showSnackbar('Failed to add baseball card, please try again later', undefined, 3000);
