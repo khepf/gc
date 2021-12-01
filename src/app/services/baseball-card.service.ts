@@ -2,13 +2,12 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { BaseballCard } from '../models/baseball-card.model';
 import { MatTableDataSource } from '@angular/material/table';
-import { Subject, Subscription } from 'rxjs';
+import { Observable, Subject, Subscription } from 'rxjs';
 import { Router } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { UIService } from './ui.service';
-import { doc, deleteDoc } from 'firebase/firestore';
-import { AuthService } from './auth.service';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { ɵPLATFORM_WORKER_UI_ID } from '@angular/common';
+import { convertSnaps } from './db-utils.service';
 
 @Injectable()
 export class BaseballCardService {
@@ -25,7 +24,10 @@ export class BaseballCardService {
     this.uiService.loadingStateChanged.next(true);
     this.fbSubs.push(
       this.db
-        .collection(uid, (ref) => ref.orderBy('year'))
+        .collection(uid, (ref) => {
+          console.log('ref', ref);
+          return ref.orderBy('year').orderBy('brand').orderBy('cardNumber');
+        })
         .snapshotChanges()
         .pipe(
           map((docArray) => {
@@ -116,6 +118,13 @@ export class BaseballCardService {
         console.log(err);
         this.uiService.showSnackbar('Failed to delete baseball card, please try again later', undefined, 3000);
       });
+  }
+
+  fetchCardsByYear(uid: any, year: string): Observable<BaseballCard[]> {
+    return this.db
+      .collection(uid, (ref) => ref.where('year', '==', '1955'))
+      .get()
+      .pipe(map((result) => convertSnaps(result)));
   }
 
   cancelSubscriptions() {

@@ -1,8 +1,19 @@
-<mat-card class="example-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Welcome to Gemini Collectibles</mat-card-title>
-    <mat-card-subtitle>Baseball Card Inventory Software For Everyone</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="../../../assets/banner.jpg" alt="Banner Photo" />
-</mat-card>
+<section>
+  <mat-card class="card1">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Welcome to Gemini Collectibles</mat-card-title>
+      <mat-card-subtitle>Baseball Card Inventory Software For Everyone</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="../../../assets/banner.jpg" alt="Banner Photo" />
+  </mat-card>
+</section>
+<section *ngIf="Bowman1955Cards$">
+  <h3>1955 Cards</h3>
+  <mat-card class="card2" *ngFor="let card of Bowman1955Cards$ | async">
+    <mat-card-header>
+      <mat-card-title>{{ card.cardNumber }} {{ card.brand }} {{ card.firstName }} {{ card.lastName }}</mat-card-title>
+      <mat-card-subtitle>{{ card.sellingPrice }}</mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+</section>

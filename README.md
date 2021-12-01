@@ -21,11 +21,13 @@ contact form - emailjs.com
 
 // WISH
 
+- need to solve reads issue (expensive) local cache read/write and read/write to db once a day?
+- - learn firestore https://www.youtube.com/watch?v=Ofux_4c94FI&list=PLl-K7zZEsYLluG5MCVEzXAQ7ACZBCuZgZ&index=2
+- netlify serverless functions
 - need roles with test users capped at 50 entries
 - ebay api - registered, check back in a day
 - image upload - reddit post
-- table reformat
-- sort by year, then brand, then card number
+- sort by year, then brand, then card number - almost there . issue is cardNumber is string not number, I think
 
 // BLOCKED
 
@@ -47,4 +49,5 @@ Added:
 1954 Topps
 1954 Bowman
 1955 Topps
+1955 Bowman
 PSA Graded Cards

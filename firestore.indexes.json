@@ -1,0 +1,23 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "8adOcBAhJcQ4QMdJ55IMRuTgnAk1",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "year",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "brand",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "cardNumber",
+          "order": "ASCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}
